@@ -1,0 +1,217 @@
+
+
+/*********** portfolio *************/
+
+#portfolio {
+    grid-area: portfolio;
+    display: grid;
+}
+
+#portfolio .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#portfolio h2 {
+    text-align: center;
+    color: #f2f7ff;
+    font-size: 40px;
+}
+
+#portfolio .titulo-portfolio {
+    background: url('../img/bg1.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 75px;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container .img_gallery  {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.boxImg {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease;
+    color: #f2f7ff;
+    opacity: 0;
+}
+
+.img-container:hover .boxImg {
+    opacity: 1;
+    background: #d96fa7;
+}
+
+.zoom-text {
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 0 linear-gradient(90deg, #ba0e7e, #ba0e7e);
+    background: linear-gradient(30deg, #d96fa7, #ba0e7e);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.2s linear;
+}
+
+.boxImg h2 {
+    padding: 15px 0;
+}
+
+.boxImg a {
+    text-decoration: none;
+    color: #f2f7ff;
+    margin-top: 25px;
+}
+
+.zoom-text:hover {
+    cursor: zoom-in;
+    transform: scale(1.1);
+}
+
+.image-view {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    display: none;
+    right: 0;
+}
+
+.sec.dark .image-view {
+    background: rgba(0, 0, 0, 0.5);
+    right: 0;
+}
+
+.image-box {
+    width: 100%;
+    max-width: 1010px;
+    height: 538px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    animation: slide-in-top 1s ease 0s 1 normal none;
+}
+
+@keyframes slide-in-top {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.git-projects {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+}
+
+ #prev-btn img,
+#next-btn img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+#prev-btn img {
+    left: -50px;
+    font-size: 50px;
+    transform: rotate(180deg);
+}
+
+#next-btn img {
+    right: -50px;
+    font-size: 50px;
+} 
+#close img {
+    position: absolute;
+    color: #f2f7ff;
+    right: 0;
+    top: -36px;
+    height: auto;
+    width: 26px;
+    cursor: pointer
+}
+
+.sec.dark .git-projects img{
+    filter: brightness(0);
+}
+
+.sec.dark .git-projects span{
+    color: #09090A;
+}
+
+.sec.dark #prev-btn img {
+    color: #09090A;
+}
+
+.sec.dark #close img {
+    color: #09090A;
+}
+
+.sec.dark #next-btn img {
+    color: #09090A;
+}
+
+#next-btn:hover,
+#prev-btn:hover {
+    opacity: 0.6;
+}
+
+@media (max-width: 600px) {   
+    #portfolio .container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .image-box {
+        width: 94%;
+        height: 233px;
+        top: 27%;
+    }
+    #next-btn img {
+        right: 0;
+        top: 51%;
+        border-radius: 24px;
+        padding: 8px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    #prev-btn img  {
+        left: 0;
+        top: 42%;
+        border-radius: 24px;
+        padding: 8px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
