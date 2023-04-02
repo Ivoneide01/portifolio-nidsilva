@@ -1,0 +1,265 @@
+
+/*NAVEGACAO*/
+header {
+    padding: 5px 10px;
+    background: black;
+    position: fixed;
+    backdrop-filter: blur(25px);
+    border-bottom: 1px solid rgb(216, 204, 208) ;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sec.dark header {
+    background: rgb(242, 247, 255, 0.5);
+    border-bottom: 1px solid rgba(114, 114, 126, 0.2);
+}
+
+.menu {
+    box-sizing: border-box;
+    height: 70px;
+    display: flex;
+    width: 100%;
+    max-width: 1669px;
+    justify-content: space-between;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    padding-top: 19px;
+}
+
+header ul li a {
+    position: relative;
+    display: block;
+    text-align: center;
+    color: #f2f7ff;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    padding: 5px 10px;
+}
+header ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background: -webkit-animation-duration (linear, right top, left top, from(#ba0e7e), to(#09090A));
+    background: linear-gradient(270deg, #d96fa7 0%, #63054b 100%);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+
+}
+
+header ul li a:hover::after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+-webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+header ul li.active a::after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+-webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+.sec.dark header ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background: -webkit-animation-duration(linear, right top, left top, from(#ba0e7e), to(#f2f7ff));
+    background: linear-gradient(270deg, #d96fa7 0%, #f2f7ff 100%);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+
+}
+
+.sec.dark header ul li.active a::after {
+-webkit-transform: scaleX(1);
+    transform: scaleX(1);
+-webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+.sec.dark header ul li a:hover::after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+-webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+
+.sec.dark header ul li a {
+    color: black;
+}
+
+
+#btn-mobile {
+    display: none;
+}
+
+.toggle {
+    position: relative;
+    ;
+}
+
+.toggle img {
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5s;
+    top: 19px;
+    left: -49px;
+}
+
+@media (max-width: 900px) {
+    #menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0px;
+        margin-top: 66px !important;
+        background: black;
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 109090;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+        width: 100%;
+        -webkit-animation-name: fadeOutLeft;
+        animation-name: fadeOutLeft;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+    @keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+    @-webkit-keyframes fadeOutLeft {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+    @keyframes fadeOutLeft {
+        0% {}
+        100% {
+            opacity: 0;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+    .sec.dark #menu {
+        background: rgb(242, 247, 255, 0.9);
+    }
+    #nav.active #menu {
+        /* height: calc(100vh - 70px);*/
+        height: 100vh;
+        visibility: visible;
+        overflow-y: auto;
+        z-index: -2;
+        -webkit-animation-name: fadeInRight;
+        animation-name: fadeInRight;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    #menu a {
+        border-bottom: 2px solid black;
+        animation: myAnim 1s ease 0s 1 normal forwards;
+    }
+    header ul li a {
+        font-size: 23px;
+        margin: 21px 0 0 0
+    }
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #d96fa7;
+        gap: 0.5rem;
+        margin-top: 18px;
+        z-index: 2;
+    }
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #d96fa7;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+        color: #d96fa7;
+    }
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        color: #d96fa7;
+        top: -7px;
+    }
+    .toggle img {
+        top: -34px;
+    }
+}

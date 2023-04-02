@@ -1,0 +1,98 @@
+
+/*********** sobre *************/
+
+#sobre {
+    grid-area: sobre;
+    width: 100%;
+}
+
+#sobre .container {
+    display: grid;
+    grid-area: services;
+    width: 100%;
+    max-width: 1120px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#sobre h2 {
+    text-align: center;
+    color: #f2f7ff;
+    font-size: 40px;
+}
+
+#sobre .titulo-sobre {
+    background: url('../img/bg1.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 0%;
+}
+
+#sobre .box-sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2px;
+}
+
+#sobre .img-sobre {
+    width: 100%;
+    height: auto;
+} 
+
+#sobre .img-sobre img {
+    margin-top: 0%;
+}
+
+#sobre .paragrafo {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+#sobre p{
+    color: #f2f7ff;
+    text-align: right;   
+    margin-top: 50px;
+}
+#sobre a {
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(30deg, #d96fa7, #e03a9e);
+    padding: 8px 30px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 20px;
+}
+#sobre a:hover {
+    box-shadow: 0px 5px 50px 0px #e03a9e inset, 0px 5px 50px 0px #e03a9e, 0px 5px 50px 0px #e03a9e inset, 0px 5px 50px 0px #e03a9e;
+}
+
+.sec.dark #sobre p {
+    color: #09090A;
+}
+
+@media (max-width: 100px) {
+    #sobre .box-sobre {
+        grid-template-columns: 1fr;
+    }
+    #sobre .img-sobre {        
+        order: 2;
+    }
+    #sobre .img-sobre img {
+        width: 100%;
+        height: auto;
+        padding: 0 20px;
+    }
+    #sobre p {
+        text-align: center;
+        
+    }
+    .paragrafo {
+        align-items: center !important;
+        order: 1;
+        padding: 0 20px;
+    }
+    
+}
