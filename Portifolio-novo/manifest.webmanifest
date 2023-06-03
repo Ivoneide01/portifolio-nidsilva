@@ -1,0 +1,18 @@
+{
+    "short_name": "Alana Barbosa - Laboratório da Alana - Barbosa DEV",
+    "name": "aboutiv2",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#5429CF",
+    "theme-color": "#5429CF",
+    "background_color": "#09090A",
+    "background-color": "#09090A",
+    "description": "Meu nome é Alana Barbosa, sou desenvolvedora front end, seja bem vindo ao Laboratório da Alana! Campinas - SP",
+    "icons": [
+      {
+        "src": "img/logo.png",
+        "type": "img/png",
+        "sizes": "2560x2560"
+      }
+    ]
+  }
