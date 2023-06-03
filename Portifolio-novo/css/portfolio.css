@@ -127,7 +127,11 @@
         opacity: 1;
     }
 }
-
+@keyframes blink-caret {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
 .git-projects {
     text-decoration: none;
     color: #fff;

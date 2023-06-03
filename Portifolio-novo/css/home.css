@@ -3,7 +3,7 @@
 #home {
     grid-area: home;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /*grid-template-columns: 1fr 1fr; */
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -64,7 +64,16 @@
     }
     .gif {
         text-align: center;
-        
+    }
 
-  }
-}
+    .cursor {
+            animation: blink-caret 0.75s infinite;}
+        
+    }
+    @media (max-width: 500px) {
+        #logo{
+            display: none;
+        }
+
+    }
+

@@ -132,7 +132,7 @@ header ul li.active a::after {
     left: -49px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 100px) {
     #menu {
         display: block;
         position: absolute;

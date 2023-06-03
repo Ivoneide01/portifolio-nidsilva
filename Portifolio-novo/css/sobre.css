@@ -73,7 +73,7 @@
     color: #09090A;
 }
 
-@media (max-width: 100px) {
+@media (max-width: 1024px) {
     #sobre .box-sobre {
         grid-template-columns: 1fr;
     }
