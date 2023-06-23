@@ -10,6 +10,26 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
+@media (max-width: 360px) {
+    main{
+        overflow-y: hidden;
+    }
+}
+@media (max-width: 360px) {
+    main{
+        overflow-y: hidden;
+    }
+}
+@media (max-width: 375px) {
+    main{
+        overflow-y: hidden;
+    }
+}
+@media (max-width: 393px) {
+    main{
+        overflow-y: hidden;
+    }
+}
 
 ::-webkit-scrollbar {
     width: 12px;
