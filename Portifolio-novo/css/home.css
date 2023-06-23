@@ -76,5 +76,19 @@
         }
 
     }
+    @media (max-width: 280px) {
+        body{
+            overflow-y:scroll;
+        }
+
+    }
+    @media (max-width: 280px) {
+        header{
+            overflow-y:scroll;
+            width: 100%;
+        }
+
+    }
+    
   
 
